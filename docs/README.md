@@ -19,7 +19,7 @@ Our goal is to create apps that **actually help**, not distract.
 ## 🌍 Live demo
 
 (V.I.P) Visit our GitHub Pages portfolio:  
-➡️ [https://kyotodevlab.github.io](https://kyotodevlab.github.io)
+➡️ https://kyotodew.github.io/kyotodevlab.github.io
 
 ## 📫 Contact
 
