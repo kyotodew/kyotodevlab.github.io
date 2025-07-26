@@ -19,70 +19,88 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; }
+        
+        .zen-pattern {
+            background-color: #f9fafb;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2300BFCF' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M0 20L20 0v10L10 20l10 10v10L0 20zM20 40V30l10-10-10-10V0l20 20-20 20z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Додаємо плавні переходи для кращого UX на мобільних */
+        * {
+            transition: all 0.3s ease-in-out;
+        }
     </style>
 </head>
 <body class="bg-white">
     <!-- Header/Hero Section -->
-    <header class="min-h-screen flex items-center justify-center px-4 py-20">
+    <header class="min-h-[80vh] md:min-h-screen flex items-center justify-center px-4 py-12 md:py-20">
         <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-4 text-gray-900 opacity-0 animate-[fadeIn_1s_ease-in_forwards]">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-gray-900 opacity-0 animate-[fadeIn_1s_ease-in_forwards]">
                 Kyoto Dev Lab
             </h1>
-            <p class="text-xl md:text-2xl text-turquoise font-medium mb-8 opacity-0 animate-[fadeIn_1s_ease-in_0.3s_forwards]">
+            <p class="text-lg sm:text-xl md:text-2xl text-turquoise font-medium mb-6 md:mb-8 opacity-0 animate-[fadeIn_1s_ease-in_0.3s_forwards]">
                 Independent Android & AI Developer
             </p>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed opacity-0 animate-[fadeIn_1s_ease-in_0.6s_forwards]">
+            <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-8 md:mb-12 leading-relaxed opacity-0 animate-[fadeIn_1s_ease-in_0.6s_forwards] px-4 md:px-0">
                 Kyoto Dev Lab is an independent software studio run by a freelance developer focused on Android apps and AI-based tools. I specialize in clean, functional design and productivity-enhancing experiences.
             </p>
         </div>
     </header>
 
     <!-- Zen System Section -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-12 md:py-20 zen-pattern">
         <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900">The Zen System</h2>
-            <p class="text-lg text-gray-600 text-center max-w-2xl mx-auto leading-relaxed">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 md:mb-8 text-gray-900">The Zen System</h2>
+            <p class="text-base md:text-lg text-gray-600 text-center max-w-2xl mx-auto leading-relaxed backdrop-blur-sm bg-white/50 p-4 md:p-6 rounded-lg">
                 The Zen System is a future suite of minimal, mindful apps aimed at improving focus, productivity, and digital clarity. All apps will share a unified philosophy and branding.
             </p>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="py-20">
+    <section class="py-12 md:py-20">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Projects <span class="text-turquoise">(Coming Soon)</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-gray-900">Projects <span class="text-turquoise">(Coming Soon)</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <!-- Project Cards -->
-                <div class="bg-gray-50 rounded-lg p-6 transition duration-300 hover:shadow-lg">
-                    <div class="w-full h-48 bg-gray-200 rounded-lg mb-4"></div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Upcoming Android productivity tool</h3>
-                    <p class="text-gray-600">A new approach to personal productivity, designed with mindfulness at its core.</p>
+                <div class="bg-gray-50 rounded-lg p-4 md:p-6 transition duration-300 hover:shadow-lg">
+                    <img src="images/project1.png" alt="Android productivity tool preview" 
+                         class="w-full h-40 md:h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">Upcoming Android productivity tool</h3>
+                    <p class="text-sm md:text-base text-gray-600">A new approach to personal productivity, designed with mindfulness at its core.</p>
                 </div>
-                <div class="bg-gray-50 rounded-lg p-6 transition duration-300 hover:shadow-lg">
-                    <div class="w-full h-48 bg-gray-200 rounded-lg mb-4"></div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">AI-enhanced minimal experience</h3>
-                    <p class="text-gray-600">Where artificial intelligence meets intentional design for better focus.</p>
+                <div class="bg-gray-50 rounded-lg p-4 md:p-6 transition duration-300 hover:shadow-lg">
+                    <img src="images/project2.png" alt="AI-enhanced experience preview" 
+                         class="w-full h-40 md:h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">AI-enhanced minimal experience</h3>
+                    <p class="text-sm md:text-base text-gray-600">Where artificial intelligence meets intentional design for better focus.</p>
                 </div>
-                <div class="bg-gray-50 rounded-lg p-6 transition duration-300 hover:shadow-lg">
-                    <div class="w-full h-48 bg-gray-200 rounded-lg mb-4"></div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Focus-first utility, in development</h3>
-                    <p class="text-gray-600">Simplicity and functionality combined for maximum impact.</p>
+                <div class="bg-gray-50 rounded-lg p-4 md:p-6 transition duration-300 hover:shadow-lg">
+                    <img src="images/project3.png" alt="Focus-first utility preview" 
+                         class="w-full h-40 md:h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">Focus-first utility, in development</h3>
+                    <p class="text-sm md:text-base text-gray-600">Simplicity and functionality combined for maximum impact.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-12 md:py-20 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Let's Connect</h2>
-            <div class="flex justify-center gap-4">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-gray-900">Let's Connect</h2>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
                 <a href="https://github.com/kyotodevlab" target="_blank" rel="noopener noreferrer" 
-                   class="inline-flex items-center px-6 py-3 bg-turquoise text-white rounded-lg hover:bg-opacity-90 transition duration-300">
+                   class="inline-flex items-center justify-center px-6 py-3 bg-turquoise text-white rounded-lg hover:bg-opacity-90 transition duration-300">
                     GitHub
                 </a>
                 <a href="mailto:kyotodew@proton.me" 
-                   class="inline-flex items-center px-6 py-3 border-2 border-turquoise text-turquoise rounded-lg hover:bg-turquoise hover:text-white transition duration-300">
+                   class="inline-flex items-center justify-center px-6 py-3 border-2 border-turquoise text-turquoise rounded-lg hover:bg-turquoise hover:text-white transition duration-300">
                     Email Me
                 </a>
             </div>
@@ -90,17 +108,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 border-t border-gray-200">
+    <footer class="py-6 md:py-8 border-t border-gray-200">
         <div class="max-w-6xl mx-auto px-4 text-center">
-            <p class="text-gray-600">© 2024 Kyoto Dev Lab. All rights reserved.</p>
+            <p class="text-sm md:text-base text-gray-600">© 2024 Kyoto Dev Lab. All rights reserved.</p>
         </div>
     </footer>
-
-    <style>
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
 </body>
 </html>
