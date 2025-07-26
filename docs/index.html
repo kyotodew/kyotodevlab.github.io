@@ -1,7 +1,106 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyoto Dev Lab - Independent Android & AI Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        turquoise: '#00BFCF',
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header/Hero Section -->
+    <header class="min-h-screen flex items-center justify-center px-4 py-20">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 text-gray-900 opacity-0 animate-[fadeIn_1s_ease-in_forwards]">
+                Kyoto Dev Lab
+            </h1>
+            <p class="text-xl md:text-2xl text-turquoise font-medium mb-8 opacity-0 animate-[fadeIn_1s_ease-in_0.3s_forwards]">
+                Independent Android & AI Developer
+            </p>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed opacity-0 animate-[fadeIn_1s_ease-in_0.6s_forwards]">
+                Kyoto Dev Lab is an independent software studio run by a freelance developer focused on Android apps and AI-based tools. I specialize in clean, functional design and productivity-enhancing experiences.
+            </p>
+        </div>
+    </header>
+
+    <!-- Zen System Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900">The Zen System</h2>
+            <p class="text-lg text-gray-600 text-center max-w-2xl mx-auto leading-relaxed">
+                The Zen System is a future suite of minimal, mindful apps aimed at improving focus, productivity, and digital clarity. All apps will share a unified philosophy and branding.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Projects <span class="text-turquoise">(Coming Soon)</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Cards -->
+                <div class="bg-gray-50 rounded-lg p-6 transition duration-300 hover:shadow-lg">
+                    <div class="w-full h-48 bg-gray-200 rounded-lg mb-4"></div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Upcoming Android productivity tool</h3>
+                    <p class="text-gray-600">A new approach to personal productivity, designed with mindfulness at its core.</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6 transition duration-300 hover:shadow-lg">
+                    <div class="w-full h-48 bg-gray-200 rounded-lg mb-4"></div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">AI-enhanced minimal experience</h3>
+                    <p class="text-gray-600">Where artificial intelligence meets intentional design for better focus.</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6 transition duration-300 hover:shadow-lg">
+                    <div class="w-full h-48 bg-gray-200 rounded-lg mb-4"></div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Focus-first utility, in development</h3>
+                    <p class="text-gray-600">Simplicity and functionality combined for maximum impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Let's Connect</h2>
+            <div class="flex justify-center gap-4">
+                <a href="https://github.com/kyotodevlab" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center px-6 py-3 bg-turquoise text-white rounded-lg hover:bg-opacity-90 transition duration-300">
+                    GitHub
+                </a>
+                <a href="mailto:contact@kyotodevlab.com" 
+                   class="inline-flex items-center px-6 py-3 border-2 border-turquoise text-turquoise rounded-lg hover:bg-turquoise hover:text-white transition duration-300">
+                    Email Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-gray-600">© 2024 Kyoto Dev Lab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </body>
 </html>
